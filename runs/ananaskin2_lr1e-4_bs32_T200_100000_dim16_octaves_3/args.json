@@ -1,0 +1,16 @@
+{
+    "config_file": null,
+    "dataset_path": "../../data/texture_samples/ananaskin2/",
+    "name": "ananaskin2_lr1e-4_bs32_T200_100000_dim16_octaves_3",
+    "T": 200,
+    "lr": 0.0001,
+    "bs": 32,
+    "attn": false,
+    "fourier_unit": true,
+    "dim": 16,
+    "img_size": 128,
+    "octaves": 3,
+    "scales": 2,
+    "training_steps": 100000,
+    "save_every": 5000
+}
