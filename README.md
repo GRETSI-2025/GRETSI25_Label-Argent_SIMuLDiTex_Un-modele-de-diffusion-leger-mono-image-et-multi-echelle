@@ -4,7 +4,7 @@
 
 # A geometrically aware auto-encoder for multi-texture synthesis
 [Pierrick Chatillon](https://scholar.google.com/citations?user=8MgK55oAAAAJ&hl=en) | [Julien Rabin](https://sites.google.com/site/rabinjulien/) | [David Tschumperlé](https://tschumperle.users.greyc.fr/)
-[](images/schema.pdf)
+[schema](images/schema.pdf)
 
 [Arxiv](TODO) [Paper](TODO)
 
