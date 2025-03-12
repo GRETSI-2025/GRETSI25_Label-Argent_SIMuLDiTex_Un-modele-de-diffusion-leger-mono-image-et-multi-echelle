@@ -10,8 +10,14 @@
 
 ### Official pytorch implementation of the paper: "SIMuLDiTex: A Single Image Multiscale and Lightweight Diffusion Model for Texture Synthesis"
 
+Examples of large scale synthesis, after training on the image displayed on the left:
+[](images/carpet_fig_10_80_time29.png)
+[](images/wall_fig_10_80_time24.png)
+[](images/rust_fig_10_80_time22.png)
 
-![Interpolation between 4 textures, synthesis of size 2048, downscaled by a factor 2, and compressed](images/interpolation.gif)
+
+
+[Interpolation between 4 textures, synthesis of size 2048, downscaled by a factor 2, and compressed](images/interpolation.gif)
 
 
 
@@ -33,9 +39,6 @@ conda activate simulditex
 
 
 ###  Train
-
-
-
 
 ```
 python train.py --name <name_of_the_experiment> # Training parameters are described in the train.py parser
