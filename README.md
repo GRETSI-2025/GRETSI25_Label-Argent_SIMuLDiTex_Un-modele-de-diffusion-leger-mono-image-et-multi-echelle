@@ -16,8 +16,8 @@ Examples of large scale synthesis, after training on the image displayed on the 
 ![](images/rust_fig_10_80_time22.png)
 
 
-
-![Interpolation between 4 textures, synthesis of size 2048, downscaled by a factor 2, and compressed](images/interpolation.gif)
+Interpolation between 4 textures, synthesis of size 2048, downscaled by a factor 2, and compressed:
+![](images/interpolation.gif)
 
 
 
@@ -34,14 +34,17 @@ conda env create -f requirements.yml
 conda activate simulditex
 ```
 
+
 ### Pretrained models
 
 
 
 ###  Train
 
+Training parameters are described in the train.py parser.
+
 ```
-python train.py --name <name_of_the_experiment> # Training parameters are described in the train.py parser
+python train.py --name <name_of_the_experiment> 
 ```
 
 ### Inference
