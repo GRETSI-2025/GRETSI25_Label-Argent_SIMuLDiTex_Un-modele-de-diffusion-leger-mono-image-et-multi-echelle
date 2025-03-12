@@ -1,0 +1,21 @@
+name: simulditex
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+  - nvidia
+dependencies:
+  - pytorch==2.5.1
+  - torchvision==0.20.1
+  - setuptools
+  - pillow
+  - tqdm
+  - numpy
+  - scipy
+  - matplotlib
+  - imageio
+  - opencv
+  - einops
+  - ipykernel
+  - ema_pytorch
+  - accelerate

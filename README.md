@@ -22,10 +22,10 @@
 
 ### Installation
 
-These commands will create a conda environment called TextureAE with the required dependencies, then place you in it :
+These commands will create a conda environment called simulditex with the required dependencies, then place you in it :
 ```
 conda env create -f requirements.yml
-conda activate TextureAE
+conda activate simulditex
 ```
 
 ### Pretrained models
@@ -38,23 +38,12 @@ conda activate TextureAE
 
 
 ```
-python code/train.py --name <name_of_the_experiment> \
---dataset_folder <path_to_dataset> #<path_to_dataset> should be an absolute path
+python train.py --name <name_of_the_experiment> # Training parameters are described in the train.py parser
 ```
-
-
-
-Please refer to code/config.py for described additional arguments.
-All the models, arguments and tensorboard logs for an experiments are stored under the same folder ./runs/name_of_the_experiment/
 
 ### Inference
 
-
-
-```
-python inference.py --name <name_of_the_experiment> 
-```
-
+All experiments with hyperparameters are replicable in the notebook experiments.ipynb
 
 ### Results 
 
