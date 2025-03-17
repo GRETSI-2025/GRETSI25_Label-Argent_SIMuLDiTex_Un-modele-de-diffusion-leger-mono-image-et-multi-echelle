@@ -39,12 +39,28 @@ conda activate simulditex
 
 
 
-###  Train
+###  Training
 
 Training parameters are described in the train.py parser.
 
 ```
 python train.py --name <name_of_the_experiment> 
+```
+
+## Multi-GPU Training
+
+As inherited from [this repo](https://github.com/lucidrains/denoising-diffusion-pytorch), the `Trainer` class is equipped with <a href="https://huggingface.co/docs/accelerate/accelerator">🤗 Accelerator</a>. You can easily do multi-gpu training in two steps using their `accelerate` CLI.
+
+At the project root directory, where the training script is, run
+
+```
+accelerate config
+```
+
+Then, the multi-gpu training can be launched with:
+
+```
+accelerate launch train.py --name <name_of_the_experiment> 
 ```
 
 ### Inference
