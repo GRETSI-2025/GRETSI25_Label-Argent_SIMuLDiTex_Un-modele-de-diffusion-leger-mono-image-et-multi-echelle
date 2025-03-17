@@ -49,15 +49,15 @@ python train.py --name <name_of_the_experiment>
 
 ## Multi-GPU Training
 
-As inherited from [this repo](https://github.com/lucidrains/denoising-diffusion-pytorch), the `Trainer` class is equipped with <a href="https://huggingface.co/docs/accelerate/accelerator">🤗 Accelerator</a>. You can easily do multi-gpu training in two steps using their `accelerate` CLI.
+As inherited from [this repo](https://github.com/lucidrains/denoising-diffusion-pytorch), the code is compatible with <a href="https://huggingface.co/docs/accelerate/accelerator">🤗 Accelerator</a>. You can easily do multi-gpu training in two steps using their `accelerate` CLI.
 
-At the project root directory, where the training script is, run
+At the project root directory, run
 
 ```
 accelerate config
 ```
 
-Then, the multi-gpu training can be launched with:
+Then, the multi-gpu training can be launched with
 
 ```
 accelerate launch train.py --name <name_of_the_experiment> 
@@ -66,7 +66,7 @@ accelerate launch train.py --name <name_of_the_experiment>
 ### Inference
 
 All experiments with hyperparameters are replicable in the notebook experiments.ipynb
-The notbook sves the reults in ./images/results/
+The notbook saves the results in ./images/results/
 
 
 
