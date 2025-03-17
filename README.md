@@ -50,8 +50,7 @@ python train.py --name <name_of_the_experiment>
 ### Inference
 
 All experiments with hyperparameters are replicable in the notebook experiments.ipynb
-
-### Results 
+The notbook sves the reults in ./images/results/
 
 
 
@@ -66,7 +65,7 @@ If you use this code for your research, please cite our paper:
 ```
 
 ### License
-This work is under the CC-BY-NC-4.0 license.
+This work is under the MIT license.
 
 ### Disclaimer
 The code is provided "as is" with ABSOLUTELY NO WARRANTY expressed or implied.
