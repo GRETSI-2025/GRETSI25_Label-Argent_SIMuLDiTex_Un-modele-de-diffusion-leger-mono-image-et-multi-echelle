@@ -6,7 +6,7 @@
 [Pierrick Chatillon](https://scholar.google.com/citations?user=8MgK55oAAAAJ&hl=en) | [Julien Rabin](https://sites.google.com/site/rabinjulien/) | [David Tschumperlé](https://tschumperle.users.greyc.fr/)
 
 
-[Arxiv](TODO) [Paper](TODO)
+[Arxiv]() [Paper]() [HAL](https://hal.science/hal-04994907)
 
 ### Official pytorch implementation of the paper: "SIMuLDiTex: A Single Image Multiscale and Lightweight Diffusion Model for Texture Synthesis"
 
