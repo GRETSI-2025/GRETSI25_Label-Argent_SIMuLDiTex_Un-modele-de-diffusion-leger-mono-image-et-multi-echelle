@@ -1,8 +1,4 @@
-# SIMuLDiTex
-
-
-
-# A geometrically aware auto-encoder for multi-texture synthesis
+# SIMuLDiTex: a Single Image Multiscale and Lightweight Diffusion Model for Texture Synthesis
 [Pierrick Chatillon](https://scholar.google.com/citations?user=8MgK55oAAAAJ&hl=en) | [Julien Rabin](https://sites.google.com/site/rabinjulien/) | [David Tschumperlé](https://tschumperle.users.greyc.fr/)
 
 
