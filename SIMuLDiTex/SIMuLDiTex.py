@@ -2241,34 +2241,20 @@ class Dataset(Dataset):
             assert h/2 ** (octaves) >= image_size[-2] and w/2 ** (octaves) >= image_size[-1]
         self.octaves=octaves
         self.scales=scales
-        crop_fns=[]
         scale_factors=[]
         for octave in range(octaves):
             for scale in range(scales):
                 scale_factor = 2 ** (scale / scales + octave)
-                target_h = int(scale_factor * image_size[-2])
-                target_w = int(scale_factor * image_size[-1])
-                random_crop = T.RandomCrop((target_h,target_w))
-                crop_fns.append(random_crop)
                 scale_factors.append(torch.tensor(scale_factor).half())
         
         scale_factor = 2 ** (octaves)
-        target_h = int(scale_factor * image_size[-2])
-        target_w = int(scale_factor * image_size[-1])
-        random_crop = T.RandomCrop((target_h,target_w))
-        crop_fns.append(random_crop)
-        
         scale_factors.append(torch.tensor(scale_factor).half())
-        
-        self.crop_fns=crop_fns
+
+        self.crop= T.RandomCrop((image_size[-2],image_size[-1]))
+
         self.scale_factors=scale_factors
-        self.transform = T.Compose([
-            #T.RandomHorizontalFlip() if augment_horizontal_flip else nn.Identity(),
-            #T.RandomCrop(image_size),
-            #T.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.1),
-            T.ToTensor()
-        ])
-        self.images=[self.transform(Image.open(path)) for path in self.paths]
+        self.images=[T.ToTensor()(Image.open(path)) for path in self.paths]
+        self.images=[[resize(img,interp_method=interp.linear,scale_factors=1/scale) for scale in scale_factors] for img in self.images]
     def __len__(self):
         return 10000
 
@@ -2276,15 +2262,12 @@ class Dataset(Dataset):
         if index>(3*self.__len__()//4):
             index=len(self.scale_factors)-1
         else:
-            index=index%len(self.crop_fns)
-        img = sample(self.images,1)[0]
-        #img = Image.open(path)
-        #img = self.transform(img)
-        
-        img=self.crop_fns[index](img)
-        img=resize(img,interp_method=interp.linear,out_shape=(self.image_size[-2],self.image_size[-1]))
+            index=index%len(self.scale_factors)
+        img = sample(self.images,1)[0][index]
+        img=self.crop(img)
         scale=self.scale_factors[index]
         return img, scale
+        
 
 # trainer class
 
