@@ -33,6 +33,7 @@ conda activate simulditex
 
 ### Pretrained models
 
+This repo contains pretrained models under ./runs/ . Please refer to experiments.ipynb for further inference details. 
 
 
 ###  Training
@@ -43,7 +44,7 @@ Training parameters are described in the train.py parser.
 python train.py --name <name_of_the_experiment> 
 ```
 
-## Multi-GPU Training
+### Multi-GPU Training
 
 As inherited from [this repo](https://github.com/lucidrains/denoising-diffusion-pytorch), the code is compatible with <a href="https://huggingface.co/docs/accelerate/accelerator">🤗 Accelerator</a>. You can easily do multi-gpu training in two steps using their `accelerate` CLI.
 
@@ -61,13 +62,13 @@ accelerate launch train.py --name <name_of_the_experiment>
 
 ### Inference
 
-All experiments with hyperparameters are replicable in the notebook experiments.ipynb
-The notbook saves the results in ./images/results/
+All experiments with hyperparameters are replicable in the notebook experiments.ipynb.
+The notebook saves the results in ./images/results/
 
 
 
 ### Acknowledgments
-This was built upon the very useful [PyTorch diffusion implementaion](https://github.com/lucidrains/denoising-diffusion-pytorch), and this amazing signal resizing repo [ResizeRight](https://github.com/assafshocher/ResizeRight)
+This was built upon the very useful [PyTorch diffusion implementaion](https://github.com/lucidrains/denoising-diffusion-pytorch), and this amazing signal resizing repo [ResizeRight](https://github.com/assafshocher/ResizeRight).
 
 ### Citation
 If you use this code for your research, please cite our paper:
