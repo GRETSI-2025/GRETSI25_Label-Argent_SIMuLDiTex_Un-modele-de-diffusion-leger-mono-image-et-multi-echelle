@@ -1,4 +1,15 @@
 # SIMuLDiTex: a Single Image Multiscale and Lightweight Diffusion Model for Texture Synthesis
+
+<hr>
+
+**_Dépôt labelisé dans le cadre du [Label Reproductible du GRESTI'25](https://gretsi.fr/colloque2025/recherche-reproductible/)_**
+
+| Label décerné | Auteur | Rapporteur | Éléments reproduits | Liens |
+|:-------------:|:------:|:----------:|:-------------------:|:------|
+| ![](label_argent.png) | Pierrick CHATILLON<br>[@PierrickCh](https://github.com/PierrickCh) | Louise FRIOT GIROUX[@Louisefg](https://github.com/Louisefg) |  Figure 1<br>Figure 3 | 📌&nbsp;[Dépôt&nbsp;original](https://github.com/PierrickCh/SIMuLDiTex)<br>⚙️&nbsp;[Issue](https://github.com/GRETSI-2025/Label-Reproductible/issues/9)<br>📝&nbsp;[Rapport](https://github.com/akrah/test/tree/main/rapports/Rapport_issue_09) |
+
+<hr>
+
 [Pierrick Chatillon](https://scholar.google.com/citations?user=8MgK55oAAAAJ&hl=en) | [Julien Rabin](https://sites.google.com/site/rabinjulien/) | [David Tschumperlé](https://tschumperle.users.greyc.fr/)
 
 
